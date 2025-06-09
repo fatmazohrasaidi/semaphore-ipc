@@ -1,31 +1,21 @@
-# 🚛🗑️ Urban Waste Collection Simulation 🖥️
+# Urban Waste Collection Simulation (UNIX)  
+This project simulates an urban waste collection system using UNIX process management tools.  
+## Core Concepts   
+**Processes:** One controller + N trucks.  
+**Synchronization:** Managed via semaphores.  
+**Communication:** Done using message queues.  
+**Shared Memory:** Stores the state of bins and system variables.  
 
-This repository contains a simulation of an urban waste collection system, implemented using UNIX process synchronization and communication tools.
-The goal is to manage the operations of garbage trucks (camions) and a controller (controleur) in a synchronized manner.
+## System Specs  
+**Bins (M):** 20   
+**Trucks (N):** 5   
+**Fuel Capacity (CP):** 300  
+**Max Missions:** 12  
+**Fuel Threshold (Min):** 70  
+**Fuel Consumption:** C × distance (C = 2)  
+**Distances:** ≤ 20  
 
-## 🎯 **Objective**
-The system simulates the following:
-- **Trucks (Camions)**: Each truck waits for assignments, collects garbage from bins, and transports it to the dump. After completing tasks, they report back to the controller and can either take on new tasks, rest, or refuel.
-- **Controller (Controleur)**: Assigns tasks (dump missions, rest, refuel) to trucks based on their fuel consumption and availability.
-
-## 🛠️ **Key Components**
-- **Process Synchronization**: Using semaphores to manage the coordination between the controller and trucks.
-- **Message Queues**: For communication between the controller and trucks.
-- **Shared Memory**: To store the state of garbage bins and other system parameters.
-
-## 📊 **Parameters**
-- **M (Bins)**: 20
-- **N (Trucks)**: 5
-- **R (Buffer Size)**: 3
-- **CP (Fuel Capacity)**: 300
-- **Distances**: 
-  - Between bins and dump: ≤ 20
-  - Between bins: ≤ 20
-- **Fuel Consumption**: Proportional to distance (C = 2)
-- **Fuel Thresholds**: Min = 70, Max = 12 missions before refueling.
-
-
-## 🚀 **How to Use**
-1. Clone the repository.
-2. Compile the code using a UNIX-based system.
-3. Run the simulation to observe the synchronized operations of the trucks and controller.
+## How to Run  
+1- Compile tp2.c file with:  gcc -o tp2.c main.exe  
+2- Run the executable: ./main.exe  
+3- The program prints logs to simulate the behavior of the trucks and controller.  
