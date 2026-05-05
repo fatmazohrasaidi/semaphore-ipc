@@ -1,5 +1,5 @@
 # Urban Waste Collection Simulation (UNIX)  
-This project simulates an urban waste collection system using UNIX process management tools. For more details about the project, the project documentation (in french) is provided in the attached PDF.  
+This project simulates an urban waste collection system using UNIX process management tools. For more details about the project, the project documentation is provided in the attached PDF.  
 ## Core Concepts   
 **Processes:** One controller + N trucks.  
 **Synchronization:** Managed via semaphores.  
